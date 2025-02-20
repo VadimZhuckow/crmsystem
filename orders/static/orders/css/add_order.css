@@ -26,17 +26,17 @@ select {
 }
 
 button {
-    width: 100%; /* Кнопка на всю ширину */
-    padding: 10px; /* Отступы внутри кнопки */
-    border: none; /* Убрать рамку */
-    border-radius: 4px; /* Закругленные углы */
-    font-size: 16px; /* Размер шрифта */
-    cursor: pointer; /* Курсор при наведении */
+    width: 100%;
+    padding: 10px; 
+    border: none; 
+    border-radius: 4px; 
+    font-size: 16px; 
+    cursor: pointer; 
 }
 
-/* Существующие стили для кнопки */
+
 button:hover {
-    background-color: #45a049; /* Темно-зеленый при наведении */
+    background-color: #45a049;
 }
 
 a {
@@ -44,7 +44,7 @@ a {
     margin-top: 10px;
     color: #007BFF;
     text-decoration: none;
-    text-align: center; /* Центрирование ссылки */
+    text-align: center; 
 }
 
 a:hover {
