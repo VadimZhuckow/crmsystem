@@ -1,0 +1,52 @@
+/* static/orders/css/orders.css */
+
+/* Существующие стили... */
+
+form {
+    background-color: #fff; /* Белый фон для формы */
+    padding: 20px; /* Отступы внутри формы */
+    border-radius: 5px; /* Закругленные углы */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    max-width: 400px; /* Максимальная ширина формы */
+    margin: auto; /* Центрирование формы */
+}
+
+label {
+    display: block; /* Отображение меток как блочные элементы */
+    margin-bottom: 8px; /* Отступ снизу */
+    font-weight: bold; /* Жирный шрифт для меток */
+}
+
+select {
+    width: 100%; /* Полная ширина селекта */
+    padding: 10px; /* Отступы внутри селекта */
+    border: 1px solid #ccc; /* Рамка */
+    border-radius: 4px; /* Закругленные углы */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+button {
+    width: 100%; /* Кнопка на всю ширину */
+    padding: 10px; /* Отступы внутри кнопки */
+    border: none; /* Убрать рамку */
+    border-radius: 4px; /* Закругленные углы */
+    font-size: 16px; /* Размер шрифта */
+    cursor: pointer; /* Курсор при наведении */
+}
+
+/* Существующие стили для кнопки */
+button:hover {
+    background-color: #45a049; /* Темно-зеленый при наведении */
+}
+
+a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007BFF;
+    text-decoration: none;
+    text-align: center; /* Центрирование ссылки */
+}
+
+a:hover {
+    text-decoration: underline;
+}

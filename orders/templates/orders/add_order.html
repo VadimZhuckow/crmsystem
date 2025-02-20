@@ -1,9 +1,10 @@
-<!-- templates/orders/add_order.html -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Добавить заказ</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'orders/css/add_order.css' %}">
 </head>
 <body>
     <h1>Добавить заказ</h1>
@@ -15,10 +16,6 @@
         
         <label for="items">Блюда (в формате JSON):</label>
         <textarea id="items" name="items" placeholder='[{"name": "блюдо1", "price": 100}, {"name": "блюдо2", "price": 150}]' required></textarea>
-        
-        <label for="total_price">Общая цена:</label>
-        <input type="number" id="total_price" name="total_price" step="0.01" placeholder="Введите общую цену" required>
-        
         <label for="status">Статус:</label>
         <select id="status" name="status">
             <option value="pending">В ожидании</option>

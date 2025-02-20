@@ -1,3 +1,5 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'orders/css/orders.css' %}">
 <h1>Список заказов</h1>
 <table>
     <tr>
@@ -15,10 +17,10 @@
         <td>{{ order.items }}</td>
         <td>{{ order.total_price }}</td>
         <td>{{ order.status }}</td>
-        {% comment %} <td>
+         <td>
             <a href="{% url 'delete_order' order.id %}">Удалить</a>
             <a href="{% url 'update_order_status' order.id %}">Изменить статус</a>
-        </td> {% endcomment %}
+        </td> 
     </tr>
     {% endfor %}
 </table>
