@@ -1,28 +1,24 @@
-/* static/orders/css/orders.css */
-
-/* Существующие стили... */
-
 form {
-    background-color: #fff; /* Белый фон для формы */
-    padding: 20px; /* Отступы внутри формы */
-    border-radius: 5px; /* Закругленные углы */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень */
-    max-width: 400px; /* Максимальная ширина формы */
-    margin: auto; /* Центрирование формы */
+    background-color: #fff; 
+    padding: 20px; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    max-width: 400px; 
+    margin: auto; 
 }
 
 label {
-    display: block; /* Отображение меток как блочные элементы */
-    margin-bottom: 8px; /* Отступ снизу */
-    font-weight: bold; /* Жирный шрифт для меток */
+    display: block; 
+    margin-bottom: 8px; 
+    font-weight: bold; 
 }
 
 select {
-    width: 100%; /* Полная ширина селекта */
-    padding: 10px; /* Отступы внутри селекта */
-    border: 1px solid #ccc; /* Рамка */
-    border-radius: 4px; /* Закругленные углы */
-    margin-bottom: 20px; /* Отступ снизу */
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    margin-bottom: 20px; 
 }
 
 button {

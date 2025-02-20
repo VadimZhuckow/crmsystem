@@ -8,4 +8,5 @@ class OrderForm(forms.ModelForm):
         fields = [
             'table_number',
             'items',
+            'status'
         ]
