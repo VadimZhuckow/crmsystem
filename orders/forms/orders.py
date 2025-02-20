@@ -1,11 +1,11 @@
-from django.forms import forms
-from models.order import Order
+from django import forms
+from orders.models.order import Order
 
 
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
-        field = [
+        fields = [
             'table_number',
             'items',
         ]

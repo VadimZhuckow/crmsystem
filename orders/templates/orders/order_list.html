@@ -1,0 +1,25 @@
+<h1>Список заказов</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Номер стола</th>
+        <th>Список блюд</th>
+        <th>Общая стоимость</th>
+        <th>Статус</th>
+        <th>Действия</th>
+    </tr>
+    {% for order in orders %}
+    <tr>
+        <td>{{ order.id }}</td>
+        <td>{{ order.table_number }}</td>
+        <td>{{ order.items }}</td>
+        <td>{{ order.total_price }}</td>
+        <td>{{ order.status }}</td>
+        {% comment %} <td>
+            <a href="{% url 'delete_order' order.id %}">Удалить</a>
+            <a href="{% url 'update_order_status' order.id %}">Изменить статус</a>
+        </td> {% endcomment %}
+    </tr>
+    {% endfor %}
+</table>
+<a href="{% url 'add_order' %}">Добавить заказ</a>
