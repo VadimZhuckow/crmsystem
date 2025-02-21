@@ -5,17 +5,50 @@
     <title>Добавить заказ</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'orders/css/add_order.css' %}">
+    <script>
+        function addItem() {
+            const name = document.getElementById('item_name').value;
+            const price = parseFloat(document.getElementById('item_price').value);
+            if (name && !isNaN(price)) {
+                const itemsList = document.getElementById('items_list');
+                const item = { name: name, price: price };
+                const listItem = document.createElement('li');
+                listItem.textContent = `Блюдо: ${name}, Цена: ${price}`;
+                itemsList.appendChild(listItem);
+                items.push(item);
+                document.getElementById('item_name').value = '';
+                document.getElementById('item_price').value = '';
+            } else {
+                alert('Пожалуйста, введите корректное название и цену блюда.');
+            }
+        }
+
+        let items = [];
+
+        function prepareItems() {
+            document.getElementById('items').value = JSON.stringify(items);
+        }
+    </script>
 </head>
 <body>
     <h1>Добавить заказ</h1>
-    <form method="POST">
+    <form method="POST" onsubmit="prepareItems()">
         {% csrf_token %}
         
         <label for="table_number">Номер стола:</label>
         <input type="number" id="table_number" name="table_number" placeholder="Введите номер стола" required>
         
-        <label for="items">Блюда (в формате JSON):</label>
-        <textarea id="items" name="items" placeholder='[{"name": "блюдо1", "price": 100}, {"name": "блюдо2", "price": 150}]' required></textarea>
+        <label for="item_name">Название блюда:</label>
+        <input type="text" id="item_name" placeholder="Введите название блюда">
+        
+        <label for="item_price">Цена блюда:</label>
+        <input type="number" id="item_price" placeholder="Введите цену блюда">
+        <button type="button" onclick="addItem()">Добавить блюдо</button>
+        
+        <ul id="items_list"></ul>
+
+        <input type="hidden" id="items" name="items" required>
+
         <label for="status">Статус:</label>
         <select id="status" name="status">
             <option value="pending">В ожидании</option>
