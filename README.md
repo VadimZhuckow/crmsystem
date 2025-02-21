@@ -28,4 +28,5 @@ venv\Scripts\activate  # Для Windows
 ```pip install -r requirements.txt```
 
 - Запуск тестов
+  
 ```pytest -s -v```
