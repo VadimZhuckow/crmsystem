@@ -11,6 +11,7 @@ def order_list(request):
 def add_order(request):
     if request.method == 'POST':
         form = OrderForm(request.POST)
+        print(request.POST)
         if form.is_valid():
             order = form.save()
             items_json = request.POST.get('items')
@@ -18,6 +19,7 @@ def add_order(request):
             total_price = sum(item.get('price', 0) for item in items)
             order.total_price = total_price
             order.save()
+            return redirect('order_list')
     return render(request, 'orders/add_order.html')
 
 def delete_order(request, order_id):
