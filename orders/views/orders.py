@@ -11,7 +11,6 @@ def order_list(request):
 def add_order(request):
     if request.method == 'POST':
         form = OrderForm(request.POST)
-        print(request.POST)
         if form.is_valid():
             order = form.save()
             items_json = request.POST.get('items')
