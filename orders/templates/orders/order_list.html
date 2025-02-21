@@ -14,7 +14,13 @@
     <tr>
         <td>{{ order.id }}</td>
         <td>{{ order.table_number }}</td>
-        <td>{{ order.items }}</td>
+        <td>
+            <ul>
+                {% for item in order.items %}
+                    <li>{{ item.name }} - Цена: {{ item.price }}</li>
+                {% endfor %}
+            </ul>
+        </td>
         <td>{{ order.total_price }}</td>
         <td>{{ order.status }}</td>
          <td>
